@@ -28,7 +28,7 @@ public class Box<T extends Fruit> {
 
     public boolean compare(Box<?> anotherBox){
 
-        return getWeight() == anotherBox.getWeight();
+        return Math.abs(getWeight() - anotherBox.getWeight()) < 0.0001;
     }
 
     public void sprinkleTo(Box<T> anotherBox) {
